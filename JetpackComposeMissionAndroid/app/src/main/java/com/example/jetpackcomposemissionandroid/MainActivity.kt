@@ -10,7 +10,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.jetpackcomposemissionandroid.jetpackcompose.BoxExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample02
 import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlineTextFieldExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.RowExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
 import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAndroidTheme
 
@@ -34,7 +38,10 @@ class MainActivity : ComponentActivity() {
 fun RendererUI(modifier: Modifier = Modifier) {
     Box(modifier = modifier) {
 //        TextFieldExample()
-        OutlineTextFieldExample()
+//        OutlineTextFieldExample()
+//        RowExample()
+//        ColumnExample()
+//        ColumnExample02()
+        BoxExample()
     }
-
 }
