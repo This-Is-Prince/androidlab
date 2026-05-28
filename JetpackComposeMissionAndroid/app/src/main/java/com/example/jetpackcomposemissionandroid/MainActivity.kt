@@ -13,6 +13,8 @@ import androidx.compose.ui.Modifier
 import com.example.jetpackcomposemissionandroid.jetpackcompose.BoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample02
+import com.example.jetpackcomposemissionandroid.jetpackcompose.IconExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.ImagesExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ModifiersExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlineTextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.RowExample
@@ -44,6 +46,8 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        ColumnExample()
 //        ColumnExample02()
 //        BoxExample()
-        ModifiersExample()
+//        ModifiersExample()
+//        ImagesExample()
+        IconExample()
     }
 }
