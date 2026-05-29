@@ -27,6 +27,7 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.TextButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedBoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedColumnExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedModifiers
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedRowExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedOutlinedTextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextExample
@@ -84,7 +85,10 @@ fun RevisedRendererUI(modifier: Modifier = Modifier) {
 //        RevisedOutlinedTextFieldExample()
 //        RevisedRowExample()
 //        RevisedColumnExample()
-        RevisedBoxExample()
+//        RevisedBoxExample()
+        RevisedModifiers()
+
+
 
 
     }
