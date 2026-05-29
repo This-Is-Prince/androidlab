@@ -13,11 +13,16 @@ import androidx.compose.ui.Modifier
 import com.example.jetpackcomposemissionandroid.jetpackcompose.BoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample02
+import com.example.jetpackcomposemissionandroid.jetpackcompose.ButtonExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.IconButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ImagesExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.LoginScreen
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ModifiersExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlineTextFieldExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlinedButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.RowExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.TextButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
 import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAndroidTheme
 
@@ -48,6 +53,16 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        BoxExample()
 //        ModifiersExample()
 //        ImagesExample()
-        IconExample()
+//        IconExample()
+//        ButtonExample()
+//        LoginScreen()
+//        OutlinedButtonExample()
+//        TextButtonExample()
+        IconButtonExample()
+
+
+
+
+
     }
 }
