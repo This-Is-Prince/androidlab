@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.jetpackcomposemissionandroid.jetpackcompose.AlertDialogExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.BoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample02
@@ -87,8 +88,8 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        HorizontalDividerExample()
 //        VerticalDividerExample()
 //        StateManagementExample()
-        RememberSaveableExample()
-
+//        RememberSaveableExample()
+        AlertDialogExample()
 
 
 
