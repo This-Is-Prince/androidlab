@@ -32,7 +32,7 @@ fun TextExample() {
     )
 }
 
-@Preview(showBackground = true, showSystemUi = true)
+//@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun TextFieldExample() {
     var name by remember { mutableStateOf("HI") }

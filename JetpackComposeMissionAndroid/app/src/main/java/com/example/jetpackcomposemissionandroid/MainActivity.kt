@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -24,6 +25,9 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlinedButtonExa
 import com.example.jetpackcomposemissionandroid.jetpackcompose.RowExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedOutlinedTextFieldExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextFieldExample
 import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -33,7 +37,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeMissionAndroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    RendererUI(
+//                    RendererUI(
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
+                    RevisedRendererUI(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -59,6 +66,19 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        OutlinedButtonExample()
 //        TextButtonExample()
         IconButtonExample()
+
+
+    }
+}
+
+@Composable
+fun RevisedRendererUI(modifier: Modifier = Modifier) {
+    Column(
+        modifier
+    ) {
+//        RevisedTextExample()
+//        RevisedTextFieldExample()
+        RevisedOutlinedTextFieldExample()
 
 
 
