@@ -15,6 +15,8 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.BoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample02
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ButtonExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.CardExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.HorizontalDividerExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ImagesExample
@@ -25,6 +27,7 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlinedButtonExa
 import com.example.jetpackcomposemissionandroid.jetpackcompose.RowExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.VerticalDividerExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedBoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedColumnExample
@@ -38,18 +41,23 @@ import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTex
 import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAndroidTheme
 
 class MainActivity : ComponentActivity() {
+    private val showRevised = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             JetpackComposeMissionAndroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    RendererUI(
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-                    RevisedRendererUI(
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    if (showRevised) {
+                        RevisedRendererUI(
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    } else {
+                        RendererUI(
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    }
                 }
             }
         }
@@ -72,9 +80,10 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        LoginScreen()
 //        OutlinedButtonExample()
 //        TextButtonExample()
-        IconButtonExample()
-
-
+//        IconButtonExample()
+//        CardExample()
+//        HorizontalDividerExample()
+        VerticalDividerExample()
     }
 }
 
