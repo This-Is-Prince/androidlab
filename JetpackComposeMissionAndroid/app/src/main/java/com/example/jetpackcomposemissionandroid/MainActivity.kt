@@ -24,7 +24,9 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.LoginScreen
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ModifiersExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlineTextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlinedButtonExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.RememberSaveableExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.RowExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.StateManagementExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.VerticalDividerExample
@@ -83,7 +85,13 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        IconButtonExample()
 //        CardExample()
 //        HorizontalDividerExample()
-        VerticalDividerExample()
+//        VerticalDividerExample()
+//        StateManagementExample()
+        RememberSaveableExample()
+
+
+
+
     }
 }
 
