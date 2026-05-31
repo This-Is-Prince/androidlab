@@ -23,6 +23,8 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.HorizontalDivider
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ImagesExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.LazyColumnExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.LazyRowExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.LoginScreen
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ModifiersExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlineTextFieldExample
@@ -93,8 +95,9 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        RememberSaveableExample()
 //        AlertDialogExample()
 //        LoginScreenUI()
-        NavGraph()
-
+//        NavGraph()
+//        LazyColumnExample()
+        LazyRowExample()
     }
 }
 
