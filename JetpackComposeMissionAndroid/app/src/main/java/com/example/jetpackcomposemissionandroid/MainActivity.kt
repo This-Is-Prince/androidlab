@@ -17,6 +17,8 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample02
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.CardExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch10_Navigation.LoginScreenUI
+import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch10_Navigation.NavGraph
 import com.example.jetpackcomposemissionandroid.jetpackcompose.HorizontalDividerExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconExample
@@ -89,9 +91,9 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        VerticalDividerExample()
 //        StateManagementExample()
 //        RememberSaveableExample()
-        AlertDialogExample()
-
-
+//        AlertDialogExample()
+//        LoginScreenUI()
+        NavGraph()
 
     }
 }
