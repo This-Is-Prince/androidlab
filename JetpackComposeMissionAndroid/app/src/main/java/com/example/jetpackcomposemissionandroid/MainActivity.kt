@@ -21,6 +21,8 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch10_Navigation.L
 import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch10_Navigation.NavGraph
 import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch12_Scaffold.AppTopBar
 import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch12_Scaffold.MyScreen
+import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch13_NavigationBar.NavBarHomeScreen
+import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch13_NavigationBar.NavBarNavigation
 import com.example.jetpackcomposemissionandroid.jetpackcompose.HorizontalDividerExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconExample
@@ -57,7 +59,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeMissionAndroidTheme {
-                MyScreen()
+//                MyScreen()
+
+//                NavBarHomeScreen()
+                NavBarNavigation()
 //                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    if (showRevised) {
 //                        RevisedRendererUI(
