@@ -19,6 +19,8 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.ButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.CardExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch10_Navigation.LoginScreenUI
 import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch10_Navigation.NavGraph
+import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch12_Scaffold.AppTopBar
+import com.example.jetpackcomposemissionandroid.jetpackcompose.Ch12_Scaffold.MyScreen
 import com.example.jetpackcomposemissionandroid.jetpackcompose.HorizontalDividerExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.IconExample
@@ -55,17 +57,18 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeMissionAndroidTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    if (showRevised) {
-                        RevisedRendererUI(
-                            modifier = Modifier.padding(innerPadding)
-                        )
-                    } else {
-                        RendererUI(
-                            modifier = Modifier.padding(innerPadding)
-                        )
-                    }
-                }
+                MyScreen()
+//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//                    if (showRevised) {
+//                        RevisedRendererUI(
+//                            modifier = Modifier.padding(innerPadding)
+//                        )
+//                    } else {
+//                        RendererUI(
+//                            modifier = Modifier.padding(innerPadding)
+//                        )
+//                    }
+//                }
             }
         }
     }
@@ -97,8 +100,11 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        LoginScreenUI()
 //        NavGraph()
 //        LazyColumnExample()
-        LazyRowExample()
+//        LazyRowExample()
+        AppTopBar()
+
     }
+
 }
 
 @Composable
