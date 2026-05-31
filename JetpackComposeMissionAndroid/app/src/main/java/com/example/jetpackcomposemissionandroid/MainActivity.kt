@@ -35,9 +35,11 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlineTextFieldE
 import com.example.jetpackcomposemissionandroid.jetpackcompose.OutlinedButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.RememberSaveableExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.RowExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.SnackBarExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.StateManagementExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
+import com.example.jetpackcomposemissionandroid.jetpackcompose.ToastExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.VerticalDividerExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedBoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedButtonExample
@@ -62,18 +64,18 @@ class MainActivity : ComponentActivity() {
 //                MyScreen()
 
 //                NavBarHomeScreen()
-                NavBarNavigation()
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    if (showRevised) {
-//                        RevisedRendererUI(
-//                            modifier = Modifier.padding(innerPadding)
-//                        )
-//                    } else {
-//                        RendererUI(
-//                            modifier = Modifier.padding(innerPadding)
-//                        )
-//                    }
-//                }
+//                NavBarNavigation()
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    if (showRevised) {
+                        RevisedRendererUI(
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    } else {
+                        RendererUI(
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    }
+                }
             }
         }
     }
@@ -106,8 +108,9 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        NavGraph()
 //        LazyColumnExample()
 //        LazyRowExample()
-        AppTopBar()
-
+//        AppTopBar()
+//        ToastExample()
+        SnackBarExample()
     }
 
 }
