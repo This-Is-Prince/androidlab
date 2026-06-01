@@ -41,15 +41,18 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.TextButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ToastExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.VerticalDividerExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedAlertDialogExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedBoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedCardsExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedColumnExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedDividers
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedIconExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedImageExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedModifiers
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedRowExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedOutlinedTextFieldExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedStateManagementExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextFieldExample
 import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAndroidTheme
@@ -131,8 +134,10 @@ fun RevisedRendererUI(modifier: Modifier = Modifier) {
 //        RevisedImageExample()
 //        RevisedIconExample()
 //        RevisedButtonExample()
-        RevisedCardsExample()
-
+//        RevisedCardsExample()
+//        RevisedDividers()
+//        RevisedStateManagementExample()
+        RevisedAlertDialogExample()
 
     }
 }
