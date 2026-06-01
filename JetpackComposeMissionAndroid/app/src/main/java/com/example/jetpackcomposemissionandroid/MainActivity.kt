@@ -41,6 +41,7 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.TextButtonExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ToastExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.VerticalDividerExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.Ch10_Navigation.RevisedNavGraph
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedAlertDialogExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedBoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedButtonExample
@@ -137,7 +138,9 @@ fun RevisedRendererUI(modifier: Modifier = Modifier) {
 //        RevisedCardsExample()
 //        RevisedDividers()
 //        RevisedStateManagementExample()
-        RevisedAlertDialogExample()
+//        RevisedAlertDialogExample()
+        RevisedNavGraph()
+
 
     }
 }
