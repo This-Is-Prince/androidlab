@@ -43,6 +43,7 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.ToastExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.VerticalDividerExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedBoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedButtonExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedCardsExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedColumnExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedIconExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedImageExample
@@ -54,7 +55,7 @@ import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTex
 import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAndroidTheme
 
 class MainActivity : ComponentActivity() {
-    private val showRevised = false
+    private val showRevised = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -129,7 +130,9 @@ fun RevisedRendererUI(modifier: Modifier = Modifier) {
 //        RevisedModifiers()
 //        RevisedImageExample()
 //        RevisedIconExample()
-        RevisedButtonExample()
+//        RevisedButtonExample()
+        RevisedCardsExample()
+
 
     }
 }
