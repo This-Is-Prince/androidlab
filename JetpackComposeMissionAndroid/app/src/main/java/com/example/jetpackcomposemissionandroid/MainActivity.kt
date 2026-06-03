@@ -5,6 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,8 +18,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.jetpackcomposemissionandroid.androidbasics.Ch02_ViewModel.CounterApp
 import com.example.jetpackcomposemissionandroid.androidbasics.Ch02_ViewModel.ScoreViewModel
 import com.example.jetpackcomposemissionandroid.androidbasics.Ch03_Intents.ImageViewModel
@@ -73,7 +80,7 @@ class MainActivity : ComponentActivity() {
 
 //    private val viewModel: ScoreViewModel by viewModels()
 
-    private val imageViewModel: ImageViewModel by viewModels()
+//    private val imageViewModel: ImageViewModel by viewModels()
 
     private val showRevised = false
 
@@ -81,11 +88,24 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        installSplashScreen()
+
         enableEdgeToEdge()
         setContent {
             JetpackComposeMissionAndroidTheme {
 
-                MainActivityRender(imageViewModel)
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        text = "Main Activity",
+                        fontSize = 16.sp,
+                    )
+
+                }
+
+//                MainActivityRender(imageViewModel)
 //                CounterApp(viewModel)
 //                MyScreen()
 
@@ -105,10 +125,10 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        val uri = intent.getParcelableExtra(Intent.EXTRA_STREAM, Uri::class.java)
-        println("HEY")
-        println(uri.toString())
-        imageViewModel.updateUri(uri)
+//        val uri = intent.getParcelableExtra(Intent.EXTRA_STREAM, Uri::class.java)
+//        println("HEY")
+//        println(uri.toString())
+//        imageViewModel.updateUri(uri)
     }
 
 //    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
