@@ -74,6 +74,7 @@ import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedOut
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedStateManagementExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextFieldExample
+import com.example.jetpackcomposemissionandroid.sharedpref.SharedPreferences
 import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -94,16 +95,16 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeMissionAndroidTheme {
 
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Text(
-                        text = "Main Activity",
-                        fontSize = 16.sp,
-                    )
-
-                }
+//                Box(
+//                    modifier = Modifier.fillMaxSize(),
+//                    contentAlignment = Alignment.Center,
+//                ) {
+//                    Text(
+//                        text = "Main Activity",
+//                        fontSize = 16.sp,
+//                    )
+//
+//                }
 
 //                MainActivityRender(imageViewModel)
 //                CounterApp(viewModel)
@@ -111,17 +112,17 @@ class MainActivity : ComponentActivity() {
 
 //                NavBarHomeScreen()
 //                NavBarNavigation()
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    if (showRevised) {
-//                        RevisedRendererUI(
-//                            modifier = Modifier.padding(innerPadding)
-//                        )
-//                    } else {
-//                        RendererUI(
-//                            modifier = Modifier.padding(innerPadding)
-//                        )
-//                    }
-//                }
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    if (showRevised) {
+                        RevisedRendererUI(
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    } else {
+                        RendererUI(
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    }
+                }
             }
         }
 
@@ -173,6 +174,7 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        ToastExample()
 //        SnackBarExample()
 //        MainActivityRender()
+        SharedPreferences()
 
     }
 
