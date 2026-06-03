@@ -1,11 +1,16 @@
 package com.example.jetpackcomposemissionandroid
 
+import android.app.ComponentCaller
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,6 +20,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.jetpackcomposemissionandroid.androidbasics.Ch02_ViewModel.CounterApp
 import com.example.jetpackcomposemissionandroid.androidbasics.Ch02_ViewModel.ScoreViewModel
+import com.example.jetpackcomposemissionandroid.androidbasics.Ch03_Intents.ImageViewModel
+import com.example.jetpackcomposemissionandroid.androidbasics.Ch03_Intents.MainActivityRender
 import com.example.jetpackcomposemissionandroid.jetpackcompose.AlertDialogExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.BoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample
@@ -64,17 +71,22 @@ import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAn
 
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: ScoreViewModel by viewModels()
+//    private val viewModel: ScoreViewModel by viewModels()
+
+    private val imageViewModel: ImageViewModel by viewModels()
 
     private val showRevised = false
 
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
         setContent {
             JetpackComposeMissionAndroidTheme {
-                CounterApp(viewModel)
+
+                MainActivityRender(imageViewModel)
+//                CounterApp(viewModel)
 //                MyScreen()
 
 //                NavBarHomeScreen()
@@ -92,7 +104,22 @@ class MainActivity : ComponentActivity() {
 //                }
             }
         }
+
+        val uri = intent.getParcelableExtra(Intent.EXTRA_STREAM, Uri::class.java)
+        println("HEY")
+        println(uri.toString())
+        imageViewModel.updateUri(uri)
     }
+
+//    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
+//    override fun onNewIntent(intent: Intent) {
+//        super.onNewIntent(intent)
+//
+//        val uri = intent.getParcelableExtra(Intent.EXTRA_STREAM, Uri::class.java)
+//        println("HEY")
+//        println(uri.toString())
+//        imageViewModel.updateUri(uri)
+//    }
 }
 
 @Composable
@@ -125,7 +152,7 @@ fun RendererUI(modifier: Modifier = Modifier) {
 //        AppTopBar()
 //        ToastExample()
 //        SnackBarExample()
-
+//        MainActivityRender()
 
     }
 
