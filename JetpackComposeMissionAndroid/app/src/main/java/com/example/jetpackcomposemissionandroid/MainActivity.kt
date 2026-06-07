@@ -60,6 +60,8 @@ import com.example.jetpackcomposemissionandroid.jetpackcompose.TextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ToastExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.VerticalDividerExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.Ch10_Navigation.RevisedNavGraph
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.Ch12_Scaffold.RevisedMyScreen
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.Ch13_NavigationBar.RevisedNavigationBarAppLayout
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedAlertDialogExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedBoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedButtonExample
@@ -68,12 +70,15 @@ import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedCol
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedDividers
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedIconExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedImageExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedLazyColumnExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedLazyRowExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedModifiers
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedRowExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedOutlinedTextFieldExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedStateManagementExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextExample
 import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedTextFieldExample
+import com.example.jetpackcomposemissionandroid.jetpackcomposerevised.RevisedToastAndSnackBar
 import com.example.jetpackcomposemissionandroid.sharedpref.SharedPreferences
 import com.example.jetpackcomposemissionandroid.ui.theme.JetpackComposeMissionAndroidTheme
 
@@ -83,7 +88,7 @@ class MainActivity : ComponentActivity() {
 
 //    private val imageViewModel: ImageViewModel by viewModels()
 
-    private val showRevised = false
+    private val showRevised = true
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,6 +99,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeMissionAndroidTheme {
+//                RevisedMyScreen()
+//                RevisedNavigationBarAppLayout()
+                RevisedToastAndSnackBar()
 
 //                Box(
 //                    modifier = Modifier.fillMaxSize(),
@@ -112,17 +120,17 @@ class MainActivity : ComponentActivity() {
 
 //                NavBarHomeScreen()
 //                NavBarNavigation()
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    if (showRevised) {
-                        RevisedRendererUI(
-                            modifier = Modifier.padding(innerPadding)
-                        )
-                    } else {
-                        RendererUI(
-                            modifier = Modifier.padding(innerPadding)
-                        )
-                    }
-                }
+//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//                    if (showRevised) {
+//                        RevisedRendererUI(
+//                            modifier = Modifier.padding(innerPadding)
+//                        )
+//                    } else {
+//                        RendererUI(
+//                            modifier = Modifier.padding(innerPadding)
+//                        )
+//                    }
+//                }
             }
         }
 
@@ -199,7 +207,9 @@ fun RevisedRendererUI(modifier: Modifier = Modifier) {
 //        RevisedDividers()
 //        RevisedStateManagementExample()
 //        RevisedAlertDialogExample()
-        RevisedNavGraph()
+//        RevisedNavGraph()
+//        RevisedLazyColumnExample()
+//        RevisedLazyRowExample()
 
 
     }
