@@ -29,6 +29,10 @@ import com.example.jetpackcomposemissionandroid.androidbasics.Ch02_ViewModel.Cou
 import com.example.jetpackcomposemissionandroid.androidbasics.Ch02_ViewModel.ScoreViewModel
 import com.example.jetpackcomposemissionandroid.androidbasics.Ch03_Intents.ImageViewModel
 import com.example.jetpackcomposemissionandroid.androidbasics.Ch03_Intents.MainActivityRender
+import com.example.jetpackcomposemissionandroid.androidbasicsrevised.Ch02_ViewModel.RevisedScoreViewModel
+import com.example.jetpackcomposemissionandroid.androidbasicsrevised.Ch02_ViewModel.RevisedViewModel
+import com.example.jetpackcomposemissionandroid.androidbasicsrevised.OfflineCaching.OfflineCachingDataStore
+import com.example.jetpackcomposemissionandroid.androidbasicsrevised.OfflineCaching.OfflineCachingSharedPreferences
 import com.example.jetpackcomposemissionandroid.jetpackcompose.AlertDialogExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.BoxExample
 import com.example.jetpackcomposemissionandroid.jetpackcompose.ColumnExample
@@ -88,6 +92,8 @@ class MainActivity : ComponentActivity() {
 
 //    private val imageViewModel: ImageViewModel by viewModels()
 
+    private val revisedScoreViewModel: RevisedScoreViewModel by viewModels()
+
     private val showRevised = true
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
@@ -101,7 +107,8 @@ class MainActivity : ComponentActivity() {
             JetpackComposeMissionAndroidTheme {
 //                RevisedMyScreen()
 //                RevisedNavigationBarAppLayout()
-                RevisedToastAndSnackBar()
+//                RevisedToastAndSnackBar()
+//                RevisedViewModel(revisedScoreViewModel)
 
 //                Box(
 //                    modifier = Modifier.fillMaxSize(),
@@ -120,17 +127,17 @@ class MainActivity : ComponentActivity() {
 
 //                NavBarHomeScreen()
 //                NavBarNavigation()
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    if (showRevised) {
-//                        RevisedRendererUI(
-//                            modifier = Modifier.padding(innerPadding)
-//                        )
-//                    } else {
-//                        RendererUI(
-//                            modifier = Modifier.padding(innerPadding)
-//                        )
-//                    }
-//                }
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    if (showRevised) {
+                        RevisedRendererUI(
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    } else {
+                        RendererUI(
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    }
+                }
             }
         }
 
@@ -210,7 +217,8 @@ fun RevisedRendererUI(modifier: Modifier = Modifier) {
 //        RevisedNavGraph()
 //        RevisedLazyColumnExample()
 //        RevisedLazyRowExample()
-
+//        OfflineCachingSharedPreferences()
+        OfflineCachingDataStore()
 
     }
 }
