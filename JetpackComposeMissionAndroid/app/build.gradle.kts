@@ -70,6 +70,9 @@ dependencies {
 
 //    DataStore
     implementation(libs.androidx.datastore.preferences)
+
+//    Room Database
+    implementation(libs.androidx.room.runtime)
 }
 
 
